@@ -38,18 +38,25 @@ export default function Contact3D() {
     },
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsSubmitting(true)
-    setTimeout(() => {
-      console.log(values)
-      setIsSubmitting(false)
-      toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you as soon as possible.",
-      })
-      form.reset()
-    }, 2000)
+  const onSubmit = async (values: any) => {
+    try {
+      const response = await fetch('/api/SendMessage', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+      alert('Message sent successfully!');
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send message');
+    }
   }
+
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
