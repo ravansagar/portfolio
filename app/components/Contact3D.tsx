@@ -99,7 +99,7 @@ export default function Contact3D() {
                 <MapPin className="h-6 w-6 text-primary mr-4 mt-1" />
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white">Location</h4>
-                  <p className="text-muted-foreground">Biratnagar, Nepal</p>
+                  <p className="text-muted-foreground">Chhinnmasta-5, Saptari, Nepal</p>
                 </div>
               </div>
 
