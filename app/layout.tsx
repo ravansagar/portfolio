@@ -12,6 +12,34 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Sagar Kumar Thakur | IT Student & Developer",
   description: "Personal portfolio of Sagar Kumar Thakur - IT Student, Developer, and Tech Enthusiast",
+  keywords: ["Sagar Thakur", "Portfolio", "Developer", "Student"],
+  authors: [{ name: "Sagar Thakur", url: "https://www.sagarthakur.com.np/" }],
+  metadataBase: new URL("https://www.sagarthakur.com.np"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Sagar Kumar Thakur | IT Student & Developer",
+    description: "Portfolio of Sagar Kumar Thakur - showcasing projects and achievements.",
+    url: "https://www.sagarthakur.com.np",
+    siteName: "Sagar Thakur Portfolio",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/SagarThakur.jpg", 
+        width: 1200,
+        height: 630,
+        alt: "Sagar Thakur Portfolio Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sagar Kumar Thakur | IT Student & Developer",
+    description: "Check out my projects and tech journey.",
+    images: ["/og-image.png"],
+  },
 }
 
 export default function RootLayout({
